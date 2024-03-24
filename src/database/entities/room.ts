@@ -12,7 +12,7 @@ export class Room {
     @Column()
     description: string;
 
-    @Column("text") // change this to text
+    @Column("text")
     images: string;
 
     @Column()
@@ -30,10 +30,10 @@ export class Room {
     @Column("json", { nullable: true })
     schedule?: { date: string, movie: string }[];
 
-    constructor(name: string, description: string, images: string[], type: string, capacity: number, accessibility?: boolean, maintenance?: boolean, schedule?: { date: string, movie: string }[]) {
+    constructor(name: string, description: string, images: string, type: string, capacity: number, accessibility?: boolean, maintenance?: boolean, schedule?: { date: string, movie: string }[]) {
         this.name = name;
         this.description = description;
-        this.images = JSON.stringify(images);
+        this.images = images;
         this.type = type;
         this.capacity = capacity;
         this.accessibility = accessibility;
@@ -41,7 +41,6 @@ export class Room {
         this.schedule = schedule || [];
     }
 
-    // add these getter and setter methods
     getImages(): string[] {
         return JSON.parse(this.images);
     }

@@ -9,7 +9,7 @@ export class AddRoomMigration1711292566026 implements MigrationInterface {
                 { name: "id", type: "int", isPrimary: true, isGenerated: true },
                 { name: "name", type: "varchar" },
                 { name: "description", type: "varchar" },
-                { name: "images", type: "text" },
+                { name: "images", type: "text" }, // Utiliser le type "text" pour stocker les images en tant que chaîne JSON
                 { name: "type", type: "varchar" },
                 { name: "capacity", type: "int" },
                 { name: "accessibility", type: "boolean", isNullable: true },
