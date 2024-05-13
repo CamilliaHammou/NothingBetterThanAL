@@ -1,0 +1,1928 @@
+{
+	"info": {
+		"_postman_id": "a8232a14-e326-4a4b-b4ad-56fadf36f0be",
+		"name": "NothingBetterThanAl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11126592"
+	},
+	"item": [
+		{
+			"name": "user-management",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John\",\r\n    \"email\": \"Hello@email.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Hello@email.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/refresh-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJpYXQiOjE3MTI1MTQ0NTksImV4cCI6MTcxMjUxNTM1OX0.kEHGU4fpUcOWqOk5AuhdIJIuQyl6flN9QPcDNl43EoM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateEmployee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTI1MTkwNTUsImV4cCI6MTcxMjUxOTk1NX0.FQs6qHwzAyYAU3d9M-gk3LbflVFUdhQpEZOig2YxrBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Martin\",\r\n    \"email\":\"martin@email.com\",\r\n    \"password\": \"123456\",\r\n    \"role\": \"reception\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/create-employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"create-employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddEmployee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTI1MTkwNTUsImV4cCI6MTcxMjUxOTk1NX0.FQs6qHwzAyYAU3d9M-gk3LbflVFUdhQpEZOig2YxrBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"ba1c393b-be96-4045-8569-6eed410fefdd\",\r\n    \"role\": \"reception\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/add-employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"add-employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTI1MTkwNTUsImV4cCI6MTcxMjUxOTk1NX0.FQs6qHwzAyYAU3d9M-gk3LbflVFUdhQpEZOig2YxrBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Hello@email.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users?page=1&limit=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNzEyNTExNDQyLCJleHAiOjE3MTI1MTIzNDJ9.fQI0LEBEpircWC2mqp1JaF8wbMb081FPQWqc9vqvwHI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEmployeesPaginated",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3MTMxOTc3ODMsImV4cCI6MTcxMzE5ODY4M30.NJqDTeRl2khSZn0Eyt1T0erFUN08dn4t5jHh-g8_Ksk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/employees?page=1&limit=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"employees"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hall-management",
+			"item": [
+				{
+					"name": "CreateHall",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTE0NzIsImV4cCI6MTcxMzExMjM3Mn0.1fPjA8w-rL8HurKRgvivVtdohNi-cNKDX-8Ww05jnPg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "hall3",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description3",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "capacity",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "accessibility",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/Najam/OneDrive/Pictures/createOrder.PNG",
+										"/C:/Users/Najam/OneDrive/Pictures/createProject.PNG"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/halls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halls"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSingleHall",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTE0NzIsImV4cCI6MTcxMzExMjM3Mn0.1fPjA8w-rL8HurKRgvivVtdohNi-cNKDX-8Ww05jnPg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/halls/a9351f12-2fb1-41c1-bcf9-a8b5ddf8655e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halls",
+								"a9351f12-2fb1-41c1-bcf9-a8b5ddf8655e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetHallsPaginated",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTE0NzIsImV4cCI6MTcxMzExMjM3Mn0.1fPjA8w-rL8HurKRgvivVtdohNi-cNKDX-8Ww05jnPg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/halls?page=1&limit=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halls"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateHall",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTE0NzIsImV4cCI6MTcxMzExMjM3Mn0.1fPjA8w-rL8HurKRgvivVtdohNi-cNKDX-8Ww05jnPg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hallx\",\r\n    \"description\":\"hallx description\",\r\n    \"type\": \"abc\",\r\n    \"capacity\": 20,\r\n    \"accessibility\": false,\r\n    \"maintenance\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/halls/a9351f12-2fb1-41c1-bcf9-a8b5ddf8655e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halls",
+								"a9351f12-2fb1-41c1-bcf9-a8b5ddf8655e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddHallImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTM3MzQsImV4cCI6MTcxMzExNDYzNH0.G0F47kFb8ESSRjnirHnhe0bDirKBhEm9tGgd9g5eLqM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Najam/OneDrive/Pictures/shifts.PNG"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/halls/324c82d4-6e07-4bd8-b264-c348c42ce0a5/add-image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halls",
+								"324c82d4-6e07-4bd8-b264-c348c42ce0a5",
+								"add-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveHallImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTM3MzQsImV4cCI6MTcxMzExNDYzNH0.G0F47kFb8ESSRjnirHnhe0bDirKBhEm9tGgd9g5eLqM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/halls/remove-image/1caf97b8-ed08-4c8a-995f-4a7351992e21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halls",
+								"remove-image",
+								"1caf97b8-ed08-4c8a-995f-4a7351992e21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteHall",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTM3MzQsImV4cCI6MTcxMzExNDYzNH0.G0F47kFb8ESSRjnirHnhe0bDirKBhEm9tGgd9g5eLqM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/halls/a9351f12-2fb1-41c1-bcf9-a8b5ddf8655e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halls",
+								"a9351f12-2fb1-41c1-bcf9-a8b5ddf8655e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetHallSessions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3MTMxOTg3MTUsImV4cCI6MTcxMzE5OTYxNX0.X5ZxnErnuh8IaScJYLfk9dzBccLl7Mg-k5ubEtdTr9o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/halls/324c82d4-6e07-4bd8-b264-c348c42ce0a5/sessions?startDate=2024-04-15&endDate=2024-04-18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"halls",
+								"324c82d4-6e07-4bd8-b264-c348c42ce0a5",
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-04-15"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-04-18"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movie-management",
+			"item": [
+				{
+					"name": "CreateMovie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTYxNTgsImV4cCI6MTcxMzExNzA1OH0.CWD-A2NZ29F30YPZVAU9NjpysJtC2pe5lXjn-ulQ7yQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "movie1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "movie1 description",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/Najam/OneDrive/Pictures/createOrder.PNG",
+										"/C:/Users/Najam/OneDrive/Pictures/createProject.PNG"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSingleMovie",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTYxNTgsImV4cCI6MTcxMzExNzA1OH0.CWD-A2NZ29F30YPZVAU9NjpysJtC2pe5lXjn-ulQ7yQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/977297e1-b0c0-40e7-8806-264350fbc607",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"977297e1-b0c0-40e7-8806-264350fbc607"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMoviesPaginated",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTYxNTgsImV4cCI6MTcxMzExNzA1OH0.CWD-A2NZ29F30YPZVAU9NjpysJtC2pe5lXjn-ulQ7yQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies?page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMovie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTYxNTgsImV4cCI6MTcxMzExNzA1OH0.CWD-A2NZ29F30YPZVAU9NjpysJtC2pe5lXjn-ulQ7yQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"movie1\",\r\n    \"description\": \"movie1 description\",\r\n    \"duration\": \"120\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/977297e1-b0c0-40e7-8806-264350fbc607",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"977297e1-b0c0-40e7-8806-264350fbc607"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddMovieImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTYxNTgsImV4cCI6MTcxMzExNzA1OH0.CWD-A2NZ29F30YPZVAU9NjpysJtC2pe5lXjn-ulQ7yQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Najam/Downloads/Group 39039.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/977297e1-b0c0-40e7-8806-264350fbc607/add-image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"977297e1-b0c0-40e7-8806-264350fbc607",
+								"add-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveMovieImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTYxNTgsImV4cCI6MTcxMzExNzA1OH0.CWD-A2NZ29F30YPZVAU9NjpysJtC2pe5lXjn-ulQ7yQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/remove-image/eded037e-8f09-40e1-ac38-b6848361ed41",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"remove-image",
+								"eded037e-8f09-40e1-ac38-b6848361ed41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMovie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMTYxNTgsImV4cCI6MTcxMzExNzA1OH0.CWD-A2NZ29F30YPZVAU9NjpysJtC2pe5lXjn-ulQ7yQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/977297e1-b0c0-40e7-8806-264350fbc607",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"977297e1-b0c0-40e7-8806-264350fbc607"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMovieSessions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3MTMxOTg3MTUsImV4cCI6MTcxMzE5OTYxNX0.X5ZxnErnuh8IaScJYLfk9dzBccLl7Mg-k5ubEtdTr9o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/2f5fe128-eb0a-470e-a277-87179f0aa0d3/sessions?startDate=2024-04-15&endDate=2024-04-18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"2f5fe128-eb0a-470e-a277-87179f0aa0d3",
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-04-15"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-04-18"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "session-management",
+			"item": [
+				{
+					"name": "CreateSession",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMjIwMjgsImV4cCI6MTcxMzEyMjkyOH0.8q5zCa9fcT4U8k4GrbuP7T69FjPjc7TcEPmZrfOUXH0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"startTime\": \"2024-04-16T07:00:00+05:00\",\r\n  \"endTime\": \"2024-04-16T10:00:00+05:00\",\r\n  \"hallId\": \"324c82d4-6e07-4bd8-b264-c348c42ce0a5\",\r\n  \"movieId\": \"2f5fe128-eb0a-470e-a277-87179f0aa0d3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSingleSession",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMjIwMjgsImV4cCI6MTcxMzEyMjkyOH0.8q5zCa9fcT4U8k4GrbuP7T69FjPjc7TcEPmZrfOUXH0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions/d15fbc8d-3f4e-44a7-a738-37e245aa4449",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions",
+								"d15fbc8d-3f4e-44a7-a738-37e245aa4449"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSessionsPaginated",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMjIwMjgsImV4cCI6MTcxMzEyMjkyOH0.8q5zCa9fcT4U8k4GrbuP7T69FjPjc7TcEPmZrfOUXH0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions?page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSession",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMjIwMjgsImV4cCI6MTcxMzEyMjkyOH0.8q5zCa9fcT4U8k4GrbuP7T69FjPjc7TcEPmZrfOUXH0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"startTime\": \"2024-04-16T09:00:00+05:00\",\r\n  \"endTime\": \"2024-04-16T12:00:00+05:00\",\r\n  \"hallId\": \"324c82d4-6e07-4bd8-b264-c348c42ce0a5\",\r\n  \"movieId\": \"2f5fe128-eb0a-470e-a277-87179f0aa0d3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions/d15fbc8d-3f4e-44a7-a738-37e245aa4449",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions",
+								"d15fbc8d-3f4e-44a7-a738-37e245aa4449"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSession",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMjIwMjgsImV4cCI6MTcxMzEyMjkyOH0.8q5zCa9fcT4U8k4GrbuP7T69FjPjc7TcEPmZrfOUXH0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions/d15fbc8d-3f4e-44a7-a738-37e245aa4449",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions",
+								"d15fbc8d-3f4e-44a7-a738-37e245aa4449"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaction-management",
+			"item": [
+				{
+					"name": "DepositAmount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZhYjUzMy01ZmJjLTRmMzgtOWQ1Ny1mMGY3OGRiZDgzOTYiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNzEzMTI1NjI2LCJleHAiOjE3MTMxMjY1MjZ9.cZ2hNZMtGWz8iCuGSO8anbqBkWwtO_2olhRIlGUrz3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 100,\r\n    \"card\": \"4242424242424242\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/transactions/deposit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transactions",
+								"deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WithdrawAmount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZhYjUzMy01ZmJjLTRmMzgtOWQ1Ny1mMGY3OGRiZDgzOTYiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNzEzMTI1NjI2LCJleHAiOjE3MTMxMjY1MjZ9.cZ2hNZMtGWz8iCuGSO8anbqBkWwtO_2olhRIlGUrz3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 50,\r\n    \"bankAccount\": \"xyz1i3u4y488484u\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/transactions/withdraw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transactions",
+								"withdraw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuyTicket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZhYjUzMy01ZmJjLTRmMzgtOWQ1Ny1mMGY3OGRiZDgzOTYiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNzEzMTI1NjI2LCJleHAiOjE3MTMxMjY1MjZ9.cZ2hNZMtGWz8iCuGSO8anbqBkWwtO_2olhRIlGUrz3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ticketType\": \"regular\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/transactions/buy-ticket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transactions",
+								"buy-ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSelfTransactions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZhYjUzMy01ZmJjLTRmMzgtOWQ1Ny1mMGY3OGRiZDgzOTYiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNzEzMTI1NjI2LCJleHAiOjE3MTMxMjY1MjZ9.cZ2hNZMtGWz8iCuGSO8anbqBkWwtO_2olhRIlGUrz3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserTransactions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3MTMxOTk0ODYsImV4cCI6MTcxMzIwMDM4Nn0.uHXdCxaSUKyyyaf-T8QTNMZs9ykuMk0fCsh1oIFY8fw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/transactions/users/a2f8cfdb-2cb6-404c-8979-4bb91d9a05c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transactions",
+								"users",
+								"a2f8cfdb-2cb6-404c-8979-4bb91d9a05c5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "session-attendance-management",
+			"item": [
+				{
+					"name": "AttendSession",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMjgxNjIsImV4cCI6MTcxMzEyOTA2Mn0.QySOhXwUU7kVQ-VlkiPJ8rSO9bandUgpApRxkLPUS7g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sessionId\": \"4e32f495-b31e-4082-9527-dcace1602077\",\r\n    \"ticketId\": \"354fe699-3c38-4794-bf5f-e88423467ad8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/attendances/attend",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendances",
+								"attend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAttendanceOfASession",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMjgxNjIsImV4cCI6MTcxMzEyOTA2Mn0.QySOhXwUU7kVQ-VlkiPJ8rSO9bandUgpApRxkLPUS7g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sessionId\": \"4e32f495-b31e-4082-9527-dcace1602077\",\r\n    \"ticketId\": \"354fe699-3c38-4794-bf5f-e88423467ad8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/attendances/session/4e32f495-b31e-4082-9527-dcace1602077",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendances",
+								"session",
+								"4e32f495-b31e-4082-9527-dcace1602077"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetHallAttendance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMzA4NDMsImV4cCI6MTcxMzEzMTc0M30.-L06TTtuvDnhOSBvEcELkgeG05QodIY_-043egE_xRQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sessionId\": \"4e32f495-b31e-4082-9527-dcace1602077\",\r\n    \"ticketId\": \"354fe699-3c38-4794-bf5f-e88423467ad8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/attendances/hall/324c82d4-6e07-4bd8-b264-c348c42ce0a5?startDate=2024-04-14T14%3A00%3A00%2B05%3A00&endDate=2024-04-18T14%3A00%3A00%2B05%3A00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendances",
+								"hall",
+								"324c82d4-6e07-4bd8-b264-c348c42ce0a5"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-04-14T14%3A00%3A00%2B05%3A00"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-04-18T14%3A00%3A00%2B05%3A00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOverallAttendanceOfCinema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTMxMjk3NTcsImV4cCI6MTcxMzEzMDY1N30.5tLGCbXLF0cV-dYOHS0ruDMEy9L3biHwoSAQghIpseI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sessionId\": \"4e32f495-b31e-4082-9527-dcace1602077\",\r\n    \"ticketId\": \"354fe699-3c38-4794-bf5f-e88423467ad8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/attendances/overview?startDate=2024-04-14T14%3A00%3A00%2B05%3A00&endDate=2024-04-18T14%3A00%3A00%2B05%3A00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendances",
+								"overview"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-04-14T14%3A00%3A00%2B05%3A00"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-04-18T14%3A00%3A00%2B05%3A00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employee-schedule-management",
+			"item": [
+				{
+					"name": "CreateEmployeeSchedule",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3MTMxMzM4MTQsImV4cCI6MTcxMzEzNDcxNH0.Q5SUS9N4AheAbb92bkP_QoNdmWaWTUys5h88FYIxVmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employeeId\": \"461e87d2-77c0-4209-815e-814067e15cb0\",\r\n  \"startTime\": \"09:00\",\r\n  \"endTime\": \"17:00\",\r\n  \"date\": \"2024-04-15\",\r\n  \"description\": \"Regular workday schedule\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees-schedule",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees-schedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEmployeeSchedule",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNzRjM2FhZi0wZDgwLTQ0NTMtOGJiOS1iMjI2Mzg1OGRjNTAiLCJyb2xlIjoic3VwZXJfYWRtaW4iLCJpYXQiOjE3MTMxMzQ5OTEsImV4cCI6MTcxMzEzNTg5MX0.c1JSymdaYhLztf3NtUOnLjn5urSK1ysuBPbMX5zh1mM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employeeId\": \"461e87d2-77c0-4209-815e-814067e15cb0\",\r\n  \"startTime\": \"09:00\",\r\n  \"endTime\": \"17:00\",\r\n  \"date\": \"2024-04-15\",\r\n  \"description\": \"Regular workday schedule\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees-schedule/employee/461e87d2-77c0-4209-815e-814067e15cb0?startDate=2024-04-14&endDate=2024-04-20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees-schedule",
+								"employee",
+								"461e87d2-77c0-4209-815e-814067e15cb0"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-04-14"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-04-20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSelfSchedule",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0NjFlODdkMi03N2MwLTQyMDktODE1ZS04MTQwNjdlMTVjYjAiLCJyb2xlIjoicmVjZXB0aW9uIiwiaWF0IjoxNzEzMTk5OTc5LCJleHAiOjE3MTMyMDA4Nzl9.HgxhOhnTmrz6XfF1rb65vs7dOQG8aI-w2Ttkkhax8jg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employeeId\": \"461e87d2-77c0-4209-815e-814067e15cb0\",\r\n  \"startTime\": \"09:00\",\r\n  \"endTime\": \"17:00\",\r\n  \"date\": \"2024-04-15\",\r\n  \"description\": \"Regular workday schedule\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees-schedule/self?startDate=2024-04-14&endDate=2024-04-20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees-schedule",
+								"self"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-04-14"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-04-20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket-management",
+			"item": [
+				{
+					"name": "BuyTicket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMmY4Y2ZkYi0yY2I2LTQwNGMtODk3OS00YmI5MWQ5YTA1YzUiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNzEzMTk4MzgzLCJleHAiOjE3MTMxOTkyODN9.iHjqZoFpHSwFlBnGdaigoynaso9ohJh9_XQqi_X99-A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ticketType\": \"regular\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tickets/buy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tickets",
+								"buy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserTickets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMmY4Y2ZkYi0yY2I2LTQwNGMtODk3OS00YmI5MWQ5YTA1YzUiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNzEzMTk4MzgzLCJleHAiOjE3MTMxOTkyODN9.iHjqZoFpHSwFlBnGdaigoynaso9ohJh9_XQqi_X99-A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

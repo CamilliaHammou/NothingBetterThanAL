@@ -3,12 +3,12 @@ services:
   mysql-db:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: your_password
-      MYSQL_DATABASE: your_database
-      MYSQL_USER: your_username
-      MYSQL_PASSWORD: your_password
+      MYSQL_ROOT_PASSWORD: abc123
+      MYSQL_DATABASE: Nothingbetterthanal
+      MYSQL_USER: camillia
+      MYSQL_PASSWORD: xyz123
     ports:
-      - "3306:3306"
+      - '3306:3306'
     volumes:
       - mysql-data:/var/lib/mysql
     restart: unless-stopped
@@ -16,7 +16,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     ports:
-      - "8080:80"
+      - '8080:80'
     depends_on:
       - mysql-db
     environment:
